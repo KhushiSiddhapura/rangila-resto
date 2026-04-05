@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table Booking</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+      h1 {
+        text-align: center;
+      }
+      input {
+        width: 100%;
+        padding: 0.5vw;
+        font-weight: 500;
+        border: 1px solid black;
+        border-radius: 0.8vw;
+      }
+      form {
+        display: flex;
+        justify-content: center;
+        padding: 2vw;
+      }
+      input[type="submit"] {
+        background-color: #1447e6;
+        color: white;
+      }
+      input[type="submit"]:hover{
+        scale: 0.95;
+        transition: scale 0.3s ease;
+        cursor: pointer;
+      }
+      td{
+        padding: 1vw;
+      }
+      p{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="table">
+      <h1>Book Your Table at Rangila</h1>
+      <form id="table-form">
+        <table>
+          <tr>
+            <td><label for="name">Name:</label></td>
+            <td style="width: 20vw">
+              <input type="text" name="name" id="name" />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="bookingTime">Booking Time:</label></td>
+            <td><input type="time" name="booktime" id="booktime" /></td>
+          </tr>
+          <tr>
+            <td><label for="people">Number of People:</label></td>
+            <td><input type="number" name="people" id="people" /></td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="submit" value="Book Table" /></td>
+          </tr>
+        </table>
+      </form>
+      <p>
+        Want to browse our menu before booking a table?
+        <a href="menu.html">Browse Here</a>
+      </p>
+    </div>
+  </body>
+</html>
