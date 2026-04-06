@@ -364,6 +364,7 @@ h1 {
     }
 
     main #offers>p {
+        padding: 2vh;
         font-size: 4vh;
     }
 
@@ -454,11 +455,14 @@ h1 {
     #menu {
         padding: 0 4vh;
         max-height: 50vh;
+        display: flex;
+        flex-direction: column;
     }
 
     #menu .menu-link-sec {
         font-size: 1.8vh;
         font-weight: bold;
+        text-align: center;
     }
 
     #menu .menu-img-sec {
