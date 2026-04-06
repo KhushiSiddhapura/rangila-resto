@@ -21,8 +21,10 @@
           "Open Sans",
           "Helvetica Neue",
           sans-serif;
+          background-color: #aac4e1;
       }
       h1 {
+        padding-top: 30vh;
         text-align: center;
       }
       input {
@@ -52,6 +54,21 @@
       p{
         text-align: center;
       }
+      .one{
+        width: 20vw;
+      }
+      @media (max-width: 400px){
+        input{
+          padding: 0.5vh;
+          border-radius: 0.8vh;
+        }
+        form{
+          padding: 2vh;
+        }
+        .one{
+          width: 50vw;
+        }
+      }
     </style>
   </head>
   <body>
@@ -61,7 +78,7 @@
         <table>
           <tr>
             <td><label for="name">Name:</label></td>
-            <td style="width: 20vw">
+            <td class="one">
               <input type="text" name="name" id="name" />
             </td>
           </tr>

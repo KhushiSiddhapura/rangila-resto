@@ -42,6 +42,10 @@ nav {
     color: black;
 }
 
+.nav-tabs-phone {
+    display: none;
+}
+
 .nav-tabs a:hover {
     background-color: #aac4e1;
     border: 0;
@@ -344,11 +348,48 @@ h1 {
     }
 
     nav {
+        justify-content: space-between;
+        padding: 1vh;
         position: fixed;
         top: 0;
         width: 100%;
         z-index: 1000;
         height: 8vh;
+    }
+
+    .nav-tabs-phone {
+        display: block;
+    }
+
+    .nav-tabs-phone img {
+        height: 5vh;
+    }
+
+    .phone-tabs {
+        display: none;
+    }
+
+    .phone-tabs a {
+        text-decoration: none;
+        color: inherit;
+        padding: 1.5vh;
+        width: 100%;
+    }
+
+    .phone-tabs a:hover {
+        background-color: #aac4e1;
+        border-radius: 1vh;
+    }
+
+    .nav-tabs-phone:hover .phone-tabs {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 7.5vh;
+        left: 0;
+        padding: 1vh;
+        height: 100vh;
+        background-color: #cad5e2;
     }
 
     #offers,
@@ -377,9 +418,11 @@ h1 {
         font-size: 2vh;
         border-radius: 1vh;
     }
-    #home{
+
+    #home {
         max-height: 60vh;
     }
+
     #home p {
         font-size: 4vh;
     }
@@ -400,6 +443,7 @@ h1 {
     .offer-card .combo-price {
         font-size: 2.5vh;
     }
+
     main #aboutus>p {
         font-size: 4vh;
     }
@@ -447,8 +491,8 @@ h1 {
     .footer-section .tabs {
         display: none;
     }
-    
-    footer .footer{
+
+    footer .footer {
         text-align: center;
     }
 
@@ -519,5 +563,28 @@ h1 {
     thead {
         color: white;
         background-color: #71a6e3;
+    }
+
+    form {
+        padding: 2vh;
+    }
+
+    input {
+        padding: 0.5vh;
+        margin: 0.5vh;
+        border: 1px solid rgb(190, 189, 189);
+        border-radius: 0.8vh;
+    }
+    input[type="submit"]:hover{
+        scale: 0.8;
+        transition: scale 0.3s ease;
+    }
+    h1 {
+        padding-top: 30vh;
+        font-size: 4vh;
+    }
+
+    .register {
+        text-align: center;
     }
 }
