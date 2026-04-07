@@ -74,7 +74,7 @@
   <body>
     <div class="table">
       <h1>Book Your Table at Rangila</h1>
-      <form id="table-form">
+      <form onsubmit="return validation()" id="table-form">
         <table>
           <tr>
             <td><label for="name">Name:</label></td>
@@ -100,5 +100,26 @@
         <a href="menu.html">Browse Here</a>
       </p>
     </div>
+    <script>
+      function validation(){
+        let name = document.getElementById("name").value
+        let time = document.getElementById("booktime").value
+        let number = document.getElementById("people").value
+        if(name == null || name == ""){
+          alert("Please enter your name")
+          return false;
+        }
+        if(time == null || time == ""){
+          alert("Please enter your time for booking")
+          return false;
+        }
+        if(number == null || number == ""){
+          alert("Please enter number of people")
+          return false;
+        }
+        alert("Table is booked for " + number + " people at " + time)
+        return true;
+      }
+    </script>
   </body>
 </html>
