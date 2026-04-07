@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body style="background-color: #aac4e1;">
-    <form>
+    <form onsubmit="return formValidation()">
       <h1>Login</h1>
       <div class="inputs">
         <input
@@ -23,5 +23,21 @@
       </div>
     </form>
     <p class="register">You haven't registered? <a href="register.html">Register Here</a></p>
+    <script>
+      function formValidation(){
+        let uname = document.getElementById("username").value
+        let pass = document.getElementById("pass").value
+        if(uname == null || uname == "" ){
+          alert("Please Enter Username!")
+          return false;
+        }
+        if(pass == null || pass == ""){
+          alert("Please Enter password!")
+          return false;
+        }
+        alert("Your form is submitted!!")
+        return true;
+      }
+    </script>
   </body>
 </html>
