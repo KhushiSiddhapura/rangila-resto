@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body style="background-color: #aac4e1;">
-    <form>
+    <form onsubmit="return formValidate()">
       <h1>Register</h1>
       <div class="inputs">
         <input
@@ -27,5 +27,35 @@
       </div>
     </form>
     <p class="register">Already have an account? <a href="login.html">Login Here</a></p>
+    <script>
+      function formValidate(){
+        let uname = document.getElementById("username").value
+        let email = document.getElementById("email").value
+        let npass = document.getElementById("npass").value
+        let cpass = document.getElementById("cpass").value
+        if(uname == null || uname == ""){
+          alert("Please Enter Username")
+          return false;
+        }
+        if(email == null|| email == ""){
+          alert("Please Enter your email id")
+          return false;
+        }
+        if(npass == ""|| npass == null ){
+          alert("Please set a password!")
+          return false;
+        }
+        if(cpass == ""|| cpass == null){
+          alert("Please enter again in confirm password!")
+          return false;
+        }
+        if(npass !== cpass ){
+          alert("Password and Confirm Password must be same!!")
+          return false;
+        }
+        alert("Registered Successfully!!")
+        return true;
+      }
+    </script>
   </body>
 </html>
